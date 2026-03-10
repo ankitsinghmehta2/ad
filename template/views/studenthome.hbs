@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+
+         body
+{
+  background-color: rgb(176, 237, 155);
+} 
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* CSS for the logo and school name */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* CSS for the print button */
+        .print-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .result-section, .total-section {
+            border: 2px solid #ccc;
+            padding: 20px;
+            font-size:1rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+         .total-section h2 {
+            margin-left: 400px;
+            text-align: left;
+            color: rgb(5, 72, 0);
+            font-size:0.6rem;
+        }
+        .name{
+             text-align: center;
+             font-size: 1.5rem;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    {{>navbar}}
+
+    <div class="header">
+        <img src="./logoschool.png" alt="School Logo" class="logo">
+        <h1>CODING ACADEMY PITHORAGARH UTTARAKHAND</h1>
+    </div>
+
+    <div class="result-section">
+        <h2 class="name">Name: {{username}}</h2>
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td>{{hindi}}</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>{{english}}</td>
+            </tr>
+            <tr>
+                <td>Maths</td>
+                <td>{{Maths}}</td>
+            </tr>
+        </table>
+         <div class="total-section">
+        <h2>TOTAL MARKS: {{TOTAL}}</h2>
+    </div>
+        <h2>RESULT: {{Result}}</h2>
+    </div>
+
+
+    <!-- Print button -->
+    <div class="print-btn">
+        <button onclick="window.print()">Print</button>
+    </div>
+</body>
+
+</html>
